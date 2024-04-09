@@ -1,0 +1,111 @@
+@import 'keyframes';
+
+.container {
+  width: 100%;
+  max-width: $containerWidth;
+  margin: 0 auto;
+  padding: 0 var(--gap);
+}
+
+// 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.btn_back {
+  transition: .3s;
+  opacity: 0;
+  cursor: pointer;
+}
+.btn_back svg path{
+  transition: fill 0.3s;
+}
+.btn_back:hover svg path{
+  fill: #fff;
+}
+body.is-chat .btn_back {
+  animation-delay: .5s;
+  animation: fadeIn 0.5s ease-in-out forwards; 
+  opacity: 1;
+}
+
+body.is-chat .btn_back.active {
+  transform: rotate(180deg);
+}
+body.is-chat .stop_generate.stop_active{
+  opacity: 1;
+  visibility: visible;
+  background: none;
+  border: none;
+  width: auto;
+  cursor: pointer;
+  position: absolute;
+  top: 8px;
+  right: 12px;
+}
+.stop_generate svg{
+  width: 24px;
+  height: 24px;
+  transition: all 0.4s 0ms;
+}
+.aura-chat__form-btn svg{
+  transition: all 0.4s 0ms;
+}
+.stop_generate:hover svg, .aura-chat__form-btn:hover svg{
+  opacity: 0.6;
+}
+.aura-chat__form-btn.is-right .u-icon{
+  height: 24px;
+  width: 24px;
+  transform: rotate(0deg);
+}
+
+.aura-chat__form-btn, .header__nav-link, .stop_generate {
+  --indent: -5rem;
+  position: relative;
+}
+.aura-chat__form-btn:before, .header__nav-link:before, .stop_generate::before {
+  content: "";
+  position: absolute;
+  top: var(--indent);
+  right: var(--indent);
+  bottom: var(--indent);
+  left: var(--indent);
+}
+.aura-chat__form-btn, .hint-card, .stop_generate {
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  outline: none;
+  border: none;
+  border-radius: 0;
+}
+.stop_generate{
+  opacity: 0;
+  visibility: hidden;
+}
+.aura-chat__form-btn, .stop_generate {
+  width: 24rem;
+  height: 24rem;
+  margin: 0 0 0 -24rem;
+  display: block;
+  align-self: flex-end;
+  color: #ffffff;
+  flex-shrink: 0;
+  transition: all 0.4s 0ms;
+  top: -8rem;
+  left: -8rem;
+  cursor: pointer;
+}
+.aura-chat__main{
+  padding: 120rem 0 20rem;
+}
+.aura-chat__card {
+  padding-bottom: 25rem;
+}

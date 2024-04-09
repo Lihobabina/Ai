@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <link rel="stylesheet" href="css/style.min.css??=v=20240409201440">
+  <link rel="apple-touch-icon" sizes="180x180" href="static/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="static/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="static/favicon/favicon-16x16.png">
+  <link rel="manifest" href="static/favicon/site.webmanifest">
+  <link rel="shortcut icon" href="static/favicon/favicon.ico">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-config" content="static/favicon/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+  <title>Aura AI</title>
+</head>
+  <body>
+<style>
+  .hidden {
+  display: none;
+}
+</style>
+    <div id="root" class="site">
+      <div class="site__inner">
+        <header class="header">
+  <div class="container header__container">
+    <a href="/" class="header__logo">
+      <img src="images/logo.svg" alt="AuraAI logo">
+    </a>
+    <nav class="header__nav" role="navigation">
+      <ul class="header__nav-list">
+        <li class="header__nav-item">
+          <a href="#" class="header__nav-link header__nav-link--about">about ńioņ</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="#" class="header__nav-link">for investors</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+        <main role="main" class="site__main">
+          <section class="aura-intro site__main-intro">
+            <div class="container aura-intro__container">
+              <div class="aura-intro__center">
+                <canvas id="canvas" width="400" height="400" class="aura-intro__media">
+                  Your browser does not support the canvas!
+                </canvas>
+                <div class="aura-intro__content">
+                  <h1 class="aura-intro__title">Hello! I am <span>Aùra AI</span><br>Ask me about <span>the future</span></h1>
+                </div>
+              </div>
+            </div>
+          </section>
+          <div class="site__main-aura">
+            <div class="aura-chat site-main__chat">
+              <div class="aura-chat__body" id="chatContentBox">
+                <div class="container aura-chat__body-container">
+                  <div class="aura-chat__main">
+                    <div class="aura-chat__card-list" id="chatContentBody"></div>
+                    <div class="aura-chat__hint" id="chatContentHint">
+                      
+                      <div class="aura-chat__hint-list-wrapper">
+                        <div class="aura-chat__hint-list">
+                          <button type="button" data-hint="Tell me about nGame mode" class="aura-chat__hint-card hint-card js-hint-card">What is the project about? </button>
+                          <button type="button" data-hint="Tell me about nDate" class="aura-chat__hint-card hint-card js-hint-card">What are ńVerse products?</button>
+                          <button type="button" data-hint="Show me roadmap" class="aura-chat__hint-card hint-card js-hint-card">How to become a member?</button>
+                          <button type="button" data-hint="Tell me about nApp" class="aura-chat__hint-card hint-card js-hint-card">What’s the goal of the project?</button>
+                          <button type="button" data-hint="Tell me about investments" class="aura-chat__hint-card hint-card js-hint-card">How to become a partner?
+                          </button>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="aura-chat__block">
+                <div class="container">
+                  <div class="aura-chat__user">
+                    <form method="POST" action="#" class="aura-chat__form">
+
+<span class="btn_back"><svg width="12" height="18" viewBox="0 0 12 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path opacity="0.88" d="M9.97177 0L11.5715 1.44388L3.19963 9L11.5715 16.5561L9.97177 18L0.000104904 9L9.97177 0Z" fill="#8A8A8A"/>
+  </svg>
+  </span>
+
+
+                      <div contenteditable="plaintext-only" role="textbox" class="aura-chat__form-textarea" id="messageTextarea"></div>
+                      <button class="stop_generate">
+                        <svg width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="12" cy="12" r="11" fill="none" stroke="#fff" stroke-width="2"/>
+                          <rect x="8.5" y="8.5" width="7" height="7" rx="1.5" fill="#fff"/>
+                        </svg>       
+                      </button>
+                      <button type="button" class="aura-chat__form-btn is-right" id="sendMessageBtn">
+                        <span class="visually-hidden">Send</span>
+                        <svg class="u-icon">
+                          <use xlink:href="images/icons/icons.svg#send"></use>
+                        </svg>
+                      </button>
+                    </form>
+                  </div>
+                  <footer class="aura-chat__footer">
+                    <nav class="aura-chat__nav">
+                      <ul class="aura-chat__nav-list">
+                        <li class="aura-chat__nav-item">
+                          <a href="#" class="aura-chat__nav-link">terms of use</a>
+                        </li>
+                        <li class="aura-chat__nav-item">
+                          <a href="#" class="aura-chat__nav-link">privacy policy</a>
+                        </li>
+                        <li class="aura-chat__nav-item">
+                          <a href="#" class="aura-chat__nav-link">cookie</a>
+                        </li>
+                        <li class="aura-chat__nav-item">
+                          <a href="#" class="aura-chat__nav-link">ú inc. constitution</a>
+                        </li>
+                        <li class="aura-chat__nav-item">
+                          <a href="#" class="aura-chat__nav-link">contacts</a>
+                        </li>
+                      </ul>
+                    </nav>
+                    <p class="aura-chat__copyright">© 2023 ńVerse Government Authority</p>
+                  </footer>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script src="js/app.min.js??=v=20240409201440"></script>
+  </body>
+</html>

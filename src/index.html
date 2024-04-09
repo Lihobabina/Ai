@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html', {
+    'title': 'Aura AI'
+  })
+  <body>
+<style>
+  .hidden {
+  display: none;
+}
+</style>
+    <div id="root" class="site">
+      <div class="site__inner">
+        @@include('html/components/header.html')
+        <main role="main" class="site__main">
+          <section class="aura-intro site__main-intro">
+            <div class="container aura-intro__container">
+              <div class="aura-intro__center">
+                <canvas id="canvas" width="400" height="400" class="aura-intro__media">
+                  Your browser does not support the canvas!
+                </canvas>
+                <div class="aura-intro__content">
+                  <h1 class="aura-intro__title">Hello! I am <span>Aùra AI</span><br>Ask me about <span>the future</span></h1>
+                </div>
+              </div>
+            </div>
+          </section>
+          <div class="site__main-aura">
+            <div class="aura-chat site-main__chat">
+              <div class="aura-chat__body" id="chatContentBox">
+                <div class="container aura-chat__body-container">
+                  <div class="aura-chat__main">
+                    <div class="aura-chat__card-list" id="chatContentBody"></div>
+                    <div class="aura-chat__hint" id="chatContentHint">
+                      <!-- <p class="aura-chat__hint-title">Do you want to know about</p> -->
+                      <div class="aura-chat__hint-list-wrapper">
+                        <div class="aura-chat__hint-list">
+                          <button type="button" data-hint="Tell me about nGame mode" class="js-hint-card aura-chat__hint-card hint-card">What is the project about? </button>
+                          <button type="button" data-hint="Tell me about nDate" class="js-hint-card aura-chat__hint-card hint-card">What are ńVerse products?</button>
+                          <button type="button" data-hint="Show me roadmap" class="js-hint-card aura-chat__hint-card hint-card">How to become a member?</button>
+                          <button type="button" data-hint="Tell me about nApp" class="js-hint-card aura-chat__hint-card hint-card">What’s the goal of the project?</button>
+                          <button type="button" data-hint="Tell me about investments" class="js-hint-card aura-chat__hint-card hint-card">How to become a partner?
+                          </button>
+                          <!-- <button type="button" data-hint="Tell me about fromnverse team" class="js-hint-card aura-chat__hint-card hint-card">our team</button> -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="aura-chat__block">
+                <div class="container">
+                  <div class="aura-chat__user">
+                    <form method="POST" action="#" class="aura-chat__form">
+
+<span class="btn_back"><svg width="12" height="18" viewBox="0 0 12 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path opacity="0.88" d="M9.97177 0L11.5715 1.44388L3.19963 9L11.5715 16.5561L9.97177 18L0.000104904 9L9.97177 0Z" fill="#8A8A8A"/>
+  </svg>
+  </span>
+
+
+                      <div contenteditable="plaintext-only" role="textbox" class="aura-chat__form-textarea" id="messageTextarea"></div>
+                      <button class="stop_generate">
+                        <svg width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="12" cy="12" r="11" fill="none" stroke="#fff" stroke-width="2" />
+                          <rect x="8.5" y="8.5" width="7" height="7" rx="1.5" fill="#fff" />
+                        </svg>       
+                      </button>
+                      <button type="button" class="aura-chat__form-btn is-right" id="sendMessageBtn">
+                        <span class="visually-hidden">Send</span>
+                        <svg class="u-icon">
+                          <use xlink:href="images/icons/icons.svg#send"></use>
+                        </svg>
+                      </button>
+                    </form>
+                  </div>
+                  <footer class="aura-chat__footer">
+                    <nav class="aura-chat__nav">
+                      <ul class="aura-chat__nav-list">
+                        <li class="aura-chat__nav-item">
+                          <a href="#" class="aura-chat__nav-link">terms of use</a>
+                        </li>
+                        <li class="aura-chat__nav-item">
+                          <a href="#" class="aura-chat__nav-link">privacy policy</a>
+                        </li>
+                        <li class="aura-chat__nav-item">
+                          <a href="#" class="aura-chat__nav-link">cookie</a>
+                        </li>
+                        <li class="aura-chat__nav-item">
+                          <a href="#" class="aura-chat__nav-link">ú inc. constitution</a>
+                        </li>
+                        <li class="aura-chat__nav-item">
+                          <a href="#" class="aura-chat__nav-link">contacts</a>
+                        </li>
+                      </ul>
+                    </nav>
+                    <p class="aura-chat__copyright">© 2023 ńVerse Government Authority</p>
+                  </footer>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    @@include('html/script.html')
+  </body>
+</html>
